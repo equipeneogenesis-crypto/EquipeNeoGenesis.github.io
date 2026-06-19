@@ -1055,4 +1055,16 @@ p {
   }
 }
 
+@media (max-width: 480px) {
+  .page-header {
+    height: 25vh;
+  }
+  .page-content {
+    padding: 2rem 0.75rem;
+  }
+  .container {
+    width: min(100% - 1.5rem, var(--max-w));
+  }
+}
+
 
