@@ -357,6 +357,7 @@ function initViewer3D() {
         loader.load(modelo.file, (model) => {
           aplicarMateriais(model);
         }, undefined, () => {
+          console.warn('Modelo 3D não carregado, usando fallback procedural');
           criarPartesModelo();
         });
       } else {
@@ -367,6 +368,7 @@ function initViewer3D() {
         loader.load(modelo.file, (gltf) => {
           aplicarMateriais(gltf.scene);
         }, undefined, () => {
+          console.warn('Modelo 3D não carregado, usando fallback procedural');
           criarPartesModelo();
         });
       }

@@ -7,14 +7,7 @@ Fonte **Supercharge** (vários pesos e estilos). Instalada localmente.
 | Arquivo | Estilo |
 |---------|--------|
 | `supercharge.ttf` | Regular |
-| `superchargecond.ttf` | Condensed |
-| `superchargeexpand.ttf` | Expanded |
-| `superchargeital.ttf` | Italic |
-| `supercharge3d.ttf` | 3D effect |
-| `superchargegrad.ttf` | Gradient |
-| `superchargehalf.ttf` | Half/fill |
-| `superchargelaser.ttf` | Laser outline |
-| `superchargestraight*.ttf` | Versões straight (sem inclinação) |
+| `superchargestraight.ttf` | Straight (sem inclinação, usado como bold/900) |
 
 ## Uso
 
