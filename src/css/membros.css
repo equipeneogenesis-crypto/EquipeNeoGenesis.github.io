@@ -1,0 +1,236 @@
+.page-header::before { background: url('../assets/images/membros-topo.png?v=2') center 30%/cover no-repeat; }
+
+.membros-section {
+  padding: 5rem 2rem;
+  background: var(--clr-bg);
+  position: relative;
+  z-index: 1;
+}
+
+.membros-subtitle {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.membros-aviso {
+  margin-top: 3rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.membros-aviso p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.membros-subtitle--anteriores {
+  margin-top: 4rem;
+}
+
+.membros-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 32px;
+}
+
+.member-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  padding: 40px 24px 24px;
+  text-align: center;
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+  min-height: 420px;
+}
+
+.member-card-thumb {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, border-color 0.5s ease;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255, 255, 255, 0.03);
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.member-card-info {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding-top: 24px;
+}
+
+.member-card-info h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 2px;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.member-card-info p {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.4;
+  margin: 4px 0 0;
+  max-width: 200px;
+}
+
+.member-nome-completo {
+  font-size: 0.65rem !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+  margin-top: 0 !important;
+}
+
+.member-area-badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin: 10px 0 4px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.member-bio {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+  margin: 6px 0 0;
+  max-width: 200px;
+}
+
+.member-contato-links {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.member-contato-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.member-contato-link:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+#membrosGridAtuais .member-card:nth-child(2) .member-card-thumb {
+  background-position: center 20%;
+}
+
+#membrosGridAtuais .member-card:nth-child(6) .member-card-thumb {
+  background-position: center 30%;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1200px) {
+  .membros-section {
+    padding: 50px 40px 60px;
+  }
+  .membros-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .membros-section {
+    padding: 40px 30px 50px;
+    margin-top: 30px;
+  }
+  .membros-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .member-card {
+    min-height: 380px;
+    padding: 32px 20px 20px;
+  }
+  .member-card-thumb {
+    width: 120px;
+    height: 120px;
+  }
+  .member-card-info h4 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .membros-section {
+    padding: 30px 20px 40px;
+    margin-top: 20px;
+  }
+  .membros-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .member-card {
+    min-height: 360px;
+    padding: 28px 20px 20px;
+  }
+  .member-card-thumb {
+    width: 110px;
+    height: 110px;
+  }
+  .member-card-info h4 {
+    font-size: 1.2rem;
+  }
+  .member-card-info p {
+    font-size: 0.85rem;
+  }
+}

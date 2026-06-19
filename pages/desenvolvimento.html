@@ -1,22 +1,22 @@
-ï»¿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NEO GENESIS â€” Desenvolvimento 3D">
-  <title>NEO GENESIS â€” Desenvolvimento</title>
-  <link rel="icon" href="../4-recursos/imagens/logo.jpeg">
+  <meta name="description" content="NEO GENESIS — Desenvolvimento 3D">
+  <title>NEO GENESIS — Desenvolvimento</title>
+  <link rel="icon" href="../assets/images/logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="../2-estilos/inner.css">
-  <link rel="stylesheet" href="../2-estilos/navbar.css">
-  <link rel="stylesheet" href="../2-estilos/desenvolvimento.css">
+  <link rel="stylesheet" href="../src/css/inner.css">
+  <link rel="stylesheet" href="../src/css/navbar.css">
+  <link rel="stylesheet" href="../src/css/desenvolvimento.css">
 </head>
 <body>
-  <a href="../index.html" class="skip-link">Voltar ao inÃ­cio</a>
+  <a href="../index.html" class="skip-link">Voltar ao início</a>
   <section class="page-header">
     <div class="page-header-content">
       <h1 data-animate="up">DESENVOLVIMENTO</h1>
@@ -24,17 +24,17 @@
   </section>
   <header class="navbar" id="navbar">
     <div class="navbar-container">
-      <nav class="nav-links-wrapper" aria-label="NavegaÃ§Ã£o principal">
+      <nav class="nav-links-wrapper" aria-label="Navegação principal">
         <ul class="nav-links">
-          <li><a href="../index.html" target="_self" class="nav-link">InÃ­cio</a></li>
+          <li><a href="../index.html" target="_self" class="nav-link">Início</a></li>
           <li><a href="membros.html" target="_self" class="nav-link">Membros</a></li>
-          <li><a href="robo.html" target="_self" class="nav-link">RobÃ´</a></li>
+          <li><a href="robo.html" target="_self" class="nav-link">Robô</a></li>
           <li><a href="desenvolvimento.html" target="_self" class="nav-link active">Desenvolvimento</a></li>
            <li><a href="galeria.html" target="_self" class="nav-link">Galeria</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span class="hamburger-icon">â˜°</span>
+        <span class="hamburger-icon">?</span>
       </button>
     </div>
   </header>
@@ -48,7 +48,7 @@
             <button class="viewer3d-modal-close" id="viewer3dClose">&times;</button>
             <div class="viewer3d-modal-info">
               <h3 id="viewer3dTitle">Modelo 3D</h3>
-              <p id="viewer3dDesc">DescriÃ§Ã£o do modelo</p>
+              <p id="viewer3dDesc">Descrição do modelo</p>
             </div>
             <div class="viewer3d-canvas-wrapper" id="viewer3dCanvasWrapper">
               <div id="viewer3dCanvas"></div>
@@ -65,20 +65,20 @@
       <div class="container">
         <div class="footer__grid">
           <div class="footer__brand">
-            <a href="../index.html" class="footer__logo" aria-label="Ir para o inÃ­cio">
-              <img loading="lazy" src="../4-recursos/imagens/logo.jpeg" alt="NEO GENESIS" class="footer__logo-img">
+            <a href="../index.html" class="footer__logo" aria-label="Ir para o início">
+              <img loading="lazy" src="../assets/images/logo.jpeg" alt="NEO GENESIS" class="footer__logo-img">
               <span class="footer__logo-text">NEO GENESIS</span>
             </a>
-            <p class="footer__desc">Equipe de tecnologia e robÃ³tica construindo o futuro atravÃ©s da inovaÃ§Ã£o e educaÃ§Ã£o.</p>
+            <p class="footer__desc">Equipe de tecnologia e robótica construindo o futuro através da inovação e educação.</p>
           </div>
-          <nav class="footer__col" aria-label="Links rÃ¡pidos">
-            <h4 class="footer__title">NavegaÃ§Ã£o</h4>
+          <nav class="footer__col" aria-label="Links rápidos">
+            <h4 class="footer__title">Navegação</h4>
             <ul class="footer__list">
-              <li><a href="../index.html">InÃ­cio</a></li>
+              <li><a href="../index.html">Início</a></li>
               <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
               <li><a href="galeria.html">Galeria</a></li>
               <li><a href="oficina.html">Oficina</a></li>
-              <li><a href="robo.html">RobÃ´</a></li>
+              <li><a href="robo.html">Robô</a></li>
             </ul>
           </nav>
           <div class="footer__col">
@@ -100,9 +100,9 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/DRACOLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
-  <script defer src="../3-scripts/render-3d.js"></script>
-  <script defer src="../3-scripts/main.js"></script>
-  <script defer src="../3-scripts/navbar.js"></script>
+  <script defer src="../src/js/render-3d.js"></script>
+  <script defer src="../src/js/main.js"></script>
+  <script defer src="../src/js/navbar.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       initViewer3D();
