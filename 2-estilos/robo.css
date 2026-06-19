@@ -1,5 +1,5 @@
 ﻿.robo-page { padding: 1rem 2rem 4rem; }
-.page-header::before { background: url('../4-recursos/imagens/robo-topo.png') center 30%/cover no-repeat; }
+.page-header::before { background: url('../4-recursos/imagens/site/robo-topo.png') center 30%/cover no-repeat; }
 .robo-page .container { width: min(100% - 4rem, var(--max-w)); margin: 0 auto; }
 .robo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px; margin-top: 3rem; }
 

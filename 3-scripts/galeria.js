@@ -53,7 +53,7 @@ const fotos = [
 ];
 
 const grid = document.querySelector(".galeria-grid");
-const basePath = "../4-recursos/imagens/";
+const basePath = "../4-recursos/imagens/galeria/";
 
 fotos.forEach((foto, i) => {
   const item = document.createElement("div");

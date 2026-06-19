@@ -4,7 +4,7 @@
     titulo: 'Excalibur',
     desc: 'Robô seguidor de linha — modelo 3D completo em CAD.',
     cor: 0x00f5ff,
-    imagem: '../4-recursos/imagens/turbo.jpeg',
+    imagem: '../4-recursos/imagens/robos/turbo.jpeg',
     file: '../4-recursos/modelos3d/excalibur.glb',
     rotacao: [-1.5708, 0, 0],
     tipo: null
@@ -14,7 +14,7 @@
     titulo: 'Carcaça',
     desc: 'Robô de sumô 1kg — estrutura compacta e resistente para combates na arena.',
     cor: 0xff6b35,
-    imagem: '../4-recursos/imagens/carcaca.png',
+    imagem: '../4-recursos/imagens/robos/carcaca.png',
     file: '../4-recursos/modelos3d/SUMO.obj',
     rotacao: [-1.5708, 0, 0],
     tipo: null
