@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neo Genesis - Equipe de Robótica Competitiva">
+  <meta property="og:title" content="Neo Genesis">
+  <meta property="og:description" content="Equipe de Robótica Competitiva">
+  <meta property="og:type" content="website">
+  <title>NEO GENESIS — Tecnologia & Robótica</title>
+  <link rel="icon" href="4-recursos/imagens/logo.jpeg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="preload" href="4-recursos/imagens/hero-bg.jpeg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="2-estilos/style.css">
+  <link rel="stylesheet" href="2-estilos/navbar.css">
+  <link rel="stylesheet" href="2-estilos/hero.css">
+  <link rel="stylesheet" href="2-estilos/responsivo.css">
+</head>
+<body>
+
+  <a href="#home" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo" aria-label="Ir para o início">
+        <img src="4-recursos/imagens/logo.jpeg" alt="NEO GENESIS" class="logo-img">
+        <span class="logo-text">NEO GENESIS</span>
+      </a>
+      <nav class="nav-links-wrapper" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="index.html#home" target="_self" class="nav-link">Início</a></li>
+          <li><a href="index.html#about" target="_self" class="nav-link">Sobre</a></li>
+          <li><a href="index.html#projects" target="_self" class="nav-link">Projetos</a></li>
+          <li><a href="index.html#sponsors" target="_self" class="nav-link">Patrocinadores</a></li>
+          <li><a href="index.html#contact" target="_self" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-icon">☰</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <div id="scroll-container">
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="hero-subtitle" data-animate="fade-up">EQUIPE</p>
+        <h1 class="hero-title" data-animate="fade-up" data-delay="200">NEO GENESIS</h1>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="about-layout">
+        <div class="about-image-side">
+          <div class="slider" id="aboutSlider">
+            <div class="slider__slide is-active">
+              <div class="slider__img" style="background-image: url('4-recursos/imagens/slide-1.jpeg')"></div>
+            </div>
+            <div class="slider__slide">
+              <div class="slider__img" style="background-image: url('4-recursos/imagens/slide-2.jpeg')"></div>
+            </div>
+            <div class="slider__slide">
+              <div class="slider__img" style="background-image: url('4-recursos/imagens/slide-3.jpeg')"></div>
+            </div>
+            <button class="slider__arrow slider__arrow--prev" aria-label="Imagem anterior">❮</button>
+            <button class="slider__arrow slider__arrow--next" aria-label="Próxima imagem">❯</button>
+          </div>
+
+        </div>
+        <div class="about-content-side">
+          <h2 class="section-title" id="about-title" data-animate="left">A Equipe</h2>
+          <div class="about-text" data-animate="up" data-delay="100">
+            <p>A <strong>Neogenesis</strong> é uma equipe de robótica do <a href="https://www.ifto.edu.br/palmas" target="_blank" rel="noopener" class="about-link">IFTO Campus Palmas</a> que surgiu da equipe <a href="https://youtu.be/0yTKlLOMuyk?si=nbgpceX5TrmwCnPw" target="_blank" rel="noopener" class="about-link"><strong>Genesis</strong></a>, fundada em 2016 por Victor Hugo, Samuel e Maria Cristina. O primeiro desafio foi a Olimpíada Brasileira de Robótica (OBR), marcando o início de uma trajetória de dedicação à tecnologia e inovação.</p>
+            <p>Após a pandemia, a equipe foi reestruturada, dando origem à Neogenesis. Atualmente orientada pelo professor <a href="https://integra.ifto.edu.br/portfolio/pessoas/wendell-eduardo-moura-costa/experimento" target="_blank" rel="noopener" class="about-link"><strong>Wendell Eduardo Moura Costa</strong></a> e vinculada ao <strong>Laboratório G3</strong>, a equipe atua em robótica móvel, programação, eletrônica e mecânica, competindo em modalidades como sumô, seguidores de linha e OBR.</p>
+            <p>Para conhecer mais sobre a história que deu origem à Neogenesis e o legado construído pela equipe fundadora, clique em <a href="https://youtu.be/0yTKlLOMuyk?si=nbgpceX5TrmwCnPw" target="_blank" rel="noopener" class="about-link"><strong>"Genesis"</strong></a>.</p>
+          </div>
+          <div class="about-buttons">
+            <a href="pages/membros.html" class="about-btn about-btn--primary" data-animate="fade" data-delay="200">MEMBROS</a>
+            <a href="pages/oficina.html" class="about-btn about-btn--secondary" data-animate="fade" data-delay="500">LAB G3</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="projetos-split" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="sr-only">Nossos Projetos</h2>
+      <a href="pages/robo.html" class="split-item" id="robos" data-animate="scale" data-delay="100">
+        <div class="split-bg" style="background-image: url('4-recursos/imagens/robo-bg.jpeg')"></div>
+        <div class="split-overlay"></div>
+        <div class="split-content">
+          <h3 class="split-title">ROBÔS</h3>
+          <span class="split-btn">EXPLORAR</span>
+        </div>
+      </a>
+      <a href="pages/desenvolvimento.html" class="split-item" id="pd" data-animate="scale" data-delay="300">
+        <div class="split-bg" style="background-image: url('4-recursos/imagens/whatsapp-dev.jpeg')"></div>
+        <div class="split-overlay"></div>
+        <div class="split-content">
+          <h3 class="split-title">DESENVOLVIMENTO</h3>
+          <span class="split-btn">EXPLORAR</span>
+        </div>
+      </a>
+    </section>
+
+    <section class="section sponsors" id="sponsors" aria-labelledby="sponsors-title">
+      <div class="container section-content">
+        <h2 class="section-title" id="sponsors-title" data-animate="right">Patrocinadores</h2>
+        <div class="sponsors-grid">
+          <div class="sponsor-card">
+            <img loading="lazy" src="4-recursos/imagens/sponsor-1.png" alt="Patrocinador" class="sponsor-logo">
+            <span class="sponsor-fallback">LOGO</span>
+          </div>
+          <div class="sponsor-card">
+            <img loading="lazy" src="4-recursos/imagens/sponsor-4.png" alt="Patrocinador" class="sponsor-logo">
+            <span class="sponsor-fallback">LOGO</span>
+          </div>
+          <div class="sponsor-card">
+            <img loading="lazy" src="4-recursos/imagens/sponsor-3.png" alt="Patrocinador" class="sponsor-logo">
+            <span class="sponsor-fallback">LOGO</span>
+          </div>
+          <div class="sponsor-card">
+            <img loading="lazy" src="4-recursos/imagens/sponsor-5.png" alt="Patrocinador" class="sponsor-logo">
+            <span class="sponsor-fallback">LOGO</span>
+          </div>
+          <div class="sponsor-card sponsor-cta" onclick="scrollToSection('contact')">
+            <span class="sponsor-cta-text">+</span>
+            <span class="sponsor-cta-label">Seja um patrocinador</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-layout">
+        <div class="contact-image-side">
+          <div class="contact-img" style="background-image: url('4-recursos/imagens/hero-bg.jpeg')"></div>
+          <div class="contact-img-overlay"></div>
+          <div class="contact-heading-block">
+            <h2 class="contact-heading" data-animate="left">Contato</h2>
+          </div>
+          <div class="contact-sub-block">
+            <p class="contact-heading-sub" data-animate="fade" data-delay="150">Vamos construir o futuro juntos</p>
+          </div>
+          <div class="contact-email-block">
+            <a href="mailto:equipeneogenesis@gmail.com" class="contact-email">equipeneogenesis@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-form-side">
+          <form class="contact-form" action="https://formsubmit.co/equipeneogenesis@gmail.com" method="POST" data-animate="right" data-delay="100">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <div class="form-group">
+              <label for="nome" class="form-label">Nome</label>
+              <input type="text" id="nome" name="nome" class="form-input" placeholder="Seu nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="seu@email.com" required>
+            </div>
+            <div class="form-group">
+              <label for="assunto" class="form-label">Assunto</label>
+              <input type="text" id="assunto" name="assunto" class="form-input" placeholder="Assunto">
+            </div>
+            <div class="form-group">
+              <label for="mensagem" class="form-label">Mensagem</label>
+              <textarea id="mensagem" name="mensagem" class="form-input form-textarea" placeholder="Sua mensagem..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="form-btn">ENVIAR MENSAGEM</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <a href="index.html" class="footer__logo" aria-label="Ir para o início">
+              <img loading="lazy" src="4-recursos/imagens/logo.jpeg" alt="NEO GENESIS" class="footer__logo-img">
+              <span class="footer__logo-text">NEO GENESIS</span>
+            </a>
+            <p class="footer__desc">Equipe de tecnologia e robótica construindo o futuro através da inovação e educação.</p>
+          </div>
+
+          <nav class="footer__col" aria-label="Links rápidos">
+            <h4 class="footer__title">Navegação</h4>
+            <ul class="footer__list">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="index.html#about">Sobre</a></li>
+              <li><a href="index.html#projects">Projetos</a></li>
+              <li><a href="index.html#sponsors">Patrocinadores</a></li>
+              <li><a href="index.html#contact">Contato</a></li>
+            </ul>
+          </nav>
+
+          <nav class="footer__col" aria-label="Serviços oferecidos">
+            <h4 class="footer__title">Serviços</h4>
+            <ul class="footer__list">
+              <li><a href="#">Consultoria</a></li>
+              <li><a href="#">Prototipagem</a></li>
+              <li><a href="#">Automação</a></li>
+              <li><a href="#">Treinamentos</a></li>
+            </ul>
+          </nav>
+
+          <div class="footer__col">
+            <h4 class="footer__title">Contato</h4>
+            <ul class="footer__list">
+              <li><a href="mailto:equipeneogenesis@gmail.com">equipeneogenesis@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Redes Sociais</h4>
+            <div class="footer__social">
+              <a href="https://www.instagram.com/team.neogenesis/" aria-label="Instagram" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer__bottom">
+          <p>&copy; 2026 NEO GENESIS. Todos os direitos reservados.</p>
+          <p class="footer__hosting">Hospedado no <a href="https://github.com" target="_blank" rel="noopener">GitHub</a></p>
+        </div>
+      </div>
+    </footer>
+
+    </div>
+
+  </main>
+
+  <script defer src="3-scripts/main.js"></script>
+  <script defer src="3-scripts/navbar.js"></script>
+  <script defer src="3-scripts/scroll-spy.js"></script>
+  <script defer src="3-scripts/animacoes.js"></script>
+  <script defer src="3-scripts/form-contato.js"></script>
+  <script defer src="3-scripts/slider.js"></script>
+  <script defer src="3-scripts/scroll-control.js"></script>
+</body>
+</html>

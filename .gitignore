@@ -1,0 +1,19 @@
+# Node / dependencies
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temp files
+*.log
+*.tmp
+
+# WhatsApp images (raw downloads)
+WhatsApp Image*.jpeg
+WhatsApp Image*.png
+
+# IDE
+.vscode/
+.idea/

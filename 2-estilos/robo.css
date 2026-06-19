@@ -1,0 +1,121 @@
+﻿.robo-page { padding: 1rem 2rem 4rem; }
+.page-header::before { background: url('../4-recursos/imagens/robo-topo.png') center 30%/cover no-repeat; }
+.robo-page .container { width: min(100% - 4rem, var(--max-w)); margin: 0 auto; }
+.robo-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 28px; margin-top: 3rem; }
+
+.robo-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 6px;
+  background: rgba(255,255,255,0.03);
+  padding: 0 0 20px;
+  text-align: center;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  animation: fadeInUp 0.4s ease forwards;
+  opacity: 0;
+}
+
+.robo-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+}
+
+.robo-card:hover .robo-card-thumb {
+  transform: scale(1.05);
+}
+
+.robo-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.8s ease;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255,255,255,0.03);
+}
+
+.robo-card-thumb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+  z-index: 0;
+}
+
+.robo-card-info {
+  text-align: center;
+  padding: 0 12px;
+}
+
+.robo-card-info h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+.robo-card-info p {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.25);
+  line-height: 1.4;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+.robo-conteudo {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.robo-conteudo h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  color: #00f5ff;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1em;
+}
+
+.robo-conteudo p {
+  color: rgba(255,255,255,0.6);
+  line-height: 1.8;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .robo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+  .robo-card-info {
+    padding: 10px 10px;
+  }
+  .robo-card-info h4 {
+    font-size: 0.85rem;
+  }
+  .robo-card-info p {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .robo-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEO GENESIS — O Galpão">
+  <title>NEO GENESIS — O Galpão</title>
+  <link rel="icon" href="../4-recursos/imagens/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../2-estilos/oficina.css">
+</head>
+<body>
+
+  <a href="../index.html" class="skip-link">Voltar ao início</a>
+
+  <a href="../index.html" class="oficina-back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
+
+  <section class="oficina-single">
+    <div class="oficina-side">
+      <span class="tag">LAB G3</span>
+      <h1>O <span>Galpão</span></h1>
+      <p class="sub">LAB G3 ROBÓTICA</p>
+      <div class="divider"></div>
+      <p class="desc">O laboratório de robótica do IFTO Campus Palmas, onde a Neo Genesis cria, testa e compete. Impressão 3D, programação, montagem — tudo aqui.</p>
+      <div class="prof">
+        <strong>Professor <a href="https://integra.ifto.edu.br/portfolio/pessoas/wendell-eduardo-moura-costa/experimento" target="_blank" style="text-decoration: none;">Wendell Eduardo</a></strong>
+        <span>Coordenador do LAB G3</span>
+      </div>
+      <div class="badge-if">
+        <i class="fas fa-leaf"></i> Instituto Federal do Tocantins
+      </div>
+    </div>
+
+    <div class="oficina-slides">
+      <div class="slide active" style="background-image: url('../4-recursos/imagens/whatsapp-dev.jpeg')"></div>
+      <div class="slide" style="background-image: url('../4-recursos/imagens/hero-bg.jpeg')"></div>
+      <div class="slide" style="background-image: url('../4-recursos/imagens/robo-bg.jpeg')"></div>
+      <button class="slide-arrow slide-arrow--prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+      <button class="slide-arrow slide-arrow--next" aria-label="Próximo"><i class="fas fa-chevron-right"></i></button>
+      <div class="oficina-nav">
+        <button class="nav-dot active" data-index="0"></button>
+        <button class="nav-dot" data-index="1"></button>
+        <button class="nav-dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll-hint">
+    <span>Role para ver mais</span>
+    <i class="fas fa-chevron-down"></i>
+  </div>
+
+  <section class="oficina-info">
+    <div class="container">
+      <div class="info-card">
+        <i class="fas fa-map-pin"></i>
+        <h3>Localização</h3>
+        <p>IFTO Campus Palmas — Laboratório de Robótica<br>Palmas, Tocantins</p>
+      </div>
+      <div class="info-card">
+        <i class="fab fa-instagram"></i>
+        <h3>Instagram</h3>
+        <p><a href="https://www.instagram.com/lab.g3/" target="_blank" rel="noopener">@lab.g3</a></p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var slides = document.querySelectorAll('.slide');
+      var dots = document.querySelectorAll('.nav-dot');
+      var prev = document.querySelector('.slide-arrow--prev');
+      var next = document.querySelector('.slide-arrow--next');
+      var current = 0;
+      var interval;
+
+      function goTo(index) {
+        slides.forEach(function(s) { s.classList.remove('active'); });
+        dots.forEach(function(d) { d.classList.remove('active'); });
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        current = index;
+        resetInterval();
+      }
+
+      function nextSlide() {
+        goTo((current + 1) % slides.length);
+      }
+
+      function prevSlide() {
+        goTo((current - 1 + slides.length) % slides.length);
+      }
+
+      function resetInterval() {
+        clearInterval(interval);
+        interval = setInterval(nextSlide, 5000);
+      }
+
+      dots.forEach(function(dot) {
+        dot.addEventListener('click', function() {
+          goTo(parseInt(this.getAttribute('data-index')));
+        });
+      });
+
+      if (prev) prev.addEventListener('click', prevSlide);
+      if (next) next.addEventListener('click', nextSlide);
+
+      interval = setInterval(nextSlide, 5000);
+    });
+  </script>
+
+</body>
+</html>
+
