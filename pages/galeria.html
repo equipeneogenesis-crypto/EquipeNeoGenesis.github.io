@@ -41,7 +41,10 @@
   <main>
     <section class="galeria-page">
       <div class="container">
-         <div class="galeria-grid" id="galeriaGrid"></div>
+        <div style="text-align:center; padding:4rem 0; min-height:40vh; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+          <i class="fas fa-images" style="font-size:4rem; color:var(--clr-neon); margin-bottom:2rem; opacity:0.5;"></i>
+          <p style="font-size:1.2rem; color:var(--clr-text-muted); max-width:400px;">Galeria em atualização. Em breve as fotos estarão disponíveis.</p>
+        </div>
         <div class="btn-voltar-wrapper">
           <a href="../index.html" class="btn-voltar">&larr; VOLTAR</a>
         </div>
@@ -83,73 +86,6 @@
   </main>
   <script defer src="../3-scripts/main.js"></script>
   <script defer src="../3-scripts/navbar.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const galeriaFotos = [
-        'WhatsApp Image 2026-06-12 at 11.09.34.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.35 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.35 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.35.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.36 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.38 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.38.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.39 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.39.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.40 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.40 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.40 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.40 (4).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.40.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.41 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.41 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.41 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.41.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.42 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.42 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.42 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.42.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.43 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.43 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.43 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.43.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.44 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.44 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.44 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.44.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.45 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.45 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.45 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.45.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.46 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.46 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.46 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.46.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.47 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.47 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.47 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.47.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.48 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.48 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.48 (3).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.48 (4).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.48.jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.49 (1).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.49 (2).jpeg',
-        'WhatsApp Image 2026-06-12 at 11.09.49.jpeg'
-      ];
-      const grid = document.getElementById('galeriaGrid');
-      grid.innerHTML = galeriaFotos.map(f => `
-        <div class="galeria-item">
-          <div class="galeria-img-wrapper">
-            <img data-src="../4-recursos/imagens/galeria/${encodeURIComponent(f)}" alt="Foto galeria">
-          </div>
-        </div>
-      `).join('');
-      document.querySelectorAll('#galeriaGrid img').forEach(img => {
-        img.src = img.dataset.src;
-      });
-    });
-  </script>
 </body>
 </html>
 
