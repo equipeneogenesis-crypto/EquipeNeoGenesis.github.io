@@ -88,12 +88,8 @@
     if (enabled) return;
     enabled = true;
 
-    document.documentElement.style.overflow = 'hidden';
-    document.documentElement.style.height = '100vh';
-    document.documentElement.style.backgroundColor = '#0A0A0A';
-    document.body.style.overflow = 'hidden';
-    document.body.style.height = '100vh';
-    document.body.style.backgroundColor = '#0A0A0A';
+    document.documentElement.classList.add('scroll-locked');
+    document.body.classList.add('scroll-locked');
 
     container.style.transition = 'transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
     container.style.willChange = 'transform';
@@ -107,12 +103,8 @@
     if (!enabled) return;
     enabled = false;
 
-    document.documentElement.style.overflow = '';
-    document.documentElement.style.height = '';
-    document.documentElement.style.backgroundColor = '';
-    document.body.style.overflow = '';
-    document.body.style.height = '';
-    document.body.style.backgroundColor = '';
+    document.documentElement.classList.remove('scroll-locked');
+    document.body.classList.remove('scroll-locked');
 
     container.style.transition = '';
     container.style.willChange = '';
@@ -121,9 +113,8 @@
 
   window.addEventListener('wheel', function(e) {
     if (!enabled) return;
-    e.preventDefault();
     handleScroll(getDeltaPixels(e));
-  }, { passive: false });
+  }, { passive: true });
 
   var touchStartY = null;
 
@@ -181,16 +172,30 @@
 
   window.addEventListener('keydown', function(e) {
     if (!enabled) return;
-    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp' || e.key === 'PageDown' || e.key === 'PageUp' || e.key === ' ') {
       e.preventDefault();
       if (isAnimating) return;
-      var dir = e.key === 'ArrowDown' ? 1 : -1;
+      var dir = (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') ? 1 : -1;
       var next = currentIndex + dir;
       if (next >= 0 && next < sections.length) {
         scrollAccumulator = 0;
         lastDirection = 0;
         goTo(next);
       }
+    }
+    if (e.key === 'Home') {
+      e.preventDefault();
+      if (isAnimating) return;
+      scrollAccumulator = 0;
+      lastDirection = 0;
+      goTo(0);
+    }
+    if (e.key === 'End') {
+      e.preventDefault();
+      if (isAnimating) return;
+      scrollAccumulator = 0;
+      lastDirection = 0;
+      goTo(sections.length - 1);
     }
   });
 

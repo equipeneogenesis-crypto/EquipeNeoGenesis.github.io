@@ -1,26 +1,4 @@
-﻿@font-face {
-  font-family: 'Supercharge';
-  src: url('../5-fontes/supercharge.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Supercharge';
-  src: url('../5-fontes/superchargestraight.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Supercharge';
-  src: url('../5-fontes/superchargestraight.ttf') format('truetype');
-  font-weight: 900;
-  font-style: normal;
-  font-display: swap;
-}
+﻿@import url('fonts.css');
 
 :root {
   --clr-bg: #1a1a2e;

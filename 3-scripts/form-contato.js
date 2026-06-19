@@ -24,7 +24,7 @@
     }
 
     if (!mensagem?.value.trim()) {
-      mensagem.style.borderColor = '#ff4444';
+      if (mensagem) mensagem.style.borderColor = '#ff4444';
       valido = false;
     }
 
@@ -37,6 +37,10 @@
     if (btn) {
       btn.textContent = 'ENVIANDO...';
       btn.disabled = true;
+      setTimeout(() => {
+        btn.disabled = false;
+        btn.textContent = 'ENVIAR';
+      }, 10000);
     }
   });
 });

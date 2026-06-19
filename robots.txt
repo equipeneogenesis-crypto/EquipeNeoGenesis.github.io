@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://equipeneogenesis-crypto.github.io/EquipeNeoGenesis.github.io/sitemap.xml

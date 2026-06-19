@@ -1,9 +1,8 @@
-﻿document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.getElementById('aboutSlider');
-  if (!slider) return;
-  const slides = slider.querySelectorAll('.slider__slide');
-  const prev = slider.querySelector('.slider__arrow--prev');
-  const next = slider.querySelector('.slider__arrow--next');
+﻿function initSlider(container) {
+  const slides = container.querySelectorAll('.slider__slide');
+  if (!slides.length) return;
+  const prev = container.querySelector('.slider__arrow--prev');
+  const next = container.querySelector('.slider__arrow--next');
   let current = 0;
   let interval;
 
@@ -16,21 +15,21 @@
   function nextSlide() { goTo(current + 1); }
   function prevSlide() { goTo(current - 1); }
 
-  next.addEventListener('click', nextSlide);
-  prev.addEventListener('click', prevSlide);
+  if (next) next.addEventListener('click', nextSlide);
+  if (prev) prev.addEventListener('click', prevSlide);
 
   function startAuto() { interval = setInterval(nextSlide, 5000); }
   function stopAuto() { clearInterval(interval); }
 
-  slider.addEventListener('mouseenter', stopAuto);
-  slider.addEventListener('mouseleave', startAuto);
+  container.addEventListener('mouseenter', stopAuto);
+  container.addEventListener('mouseleave', startAuto);
 
   // Touch swipe support
   var touchStartX = null;
-  slider.addEventListener('touchstart', function(e) {
+  container.addEventListener('touchstart', function(e) {
     touchStartX = e.changedTouches[0].screenX;
   }, { passive: true });
-  slider.addEventListener('touchend', function(e) {
+  container.addEventListener('touchend', function(e) {
     if (touchStartX === null) return;
     var diff = touchStartX - e.changedTouches[0].screenX;
     if (Math.abs(diff) > 40) {
@@ -40,4 +39,9 @@
   }, { passive: true });
 
   startAuto();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const slider = document.getElementById('aboutSlider');
+  if (slider) initSlider(slider);
 });

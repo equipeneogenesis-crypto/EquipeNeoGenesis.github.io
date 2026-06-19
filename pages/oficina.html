@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NEO GENESIS — O Galpão">
   <title>NEO GENESIS — O Galpão</title>
+  <meta property="og:title" content="Oficina — NEO GENESIS">
+  <meta property="og:description" content="Conheça a oficina e o laboratório da equipe de robótica NEO GENESIS.">
+  <meta property="og:image" content="https://equipeneogenesis-crypto.github.io/EquipeNeoGenesis.github.io/4-recursos/imagens/site/hero-bg.jpeg">
+  <meta property="og:url" content="https://equipeneogenesis-crypto.github.io/EquipeNeoGenesis.github.io/pages/oficina.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEO GENESIS">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Oficina — NEO GENESIS">
+  <meta name="twitter:description" content="Conheça a oficina e o laboratório da equipe de robótica NEO GENESIS.">
+  <meta name="twitter:image" content="https://equipeneogenesis-crypto.github.io/EquipeNeoGenesis.github.io/4-recursos/imagens/site/hero-bg.jpeg">
+  <meta name="keywords" content="oficina, laboratório, NEO GENESIS, robótica, IFTO">
+  <meta name="author" content="NEO GENESIS">
   <link rel="icon" href="../4-recursos/imagens/site/logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,21 +23,39 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="../2-estilos/inner.css">
+  <link rel="stylesheet" href="../2-estilos/navbar.css">
   <link rel="stylesheet" href="../2-estilos/oficina.css">
 </head>
 <body>
 
   <a href="../index.html" class="skip-link">Voltar ao início</a>
+  <header class="navbar" id="navbar">
+    <div class="navbar-container">
+      <nav class="nav-links-wrapper" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="../index.html" class="nav-link">Início</a></li>
+          <li><a href="membros.html" class="nav-link">Membros</a></li>
+          <li><a href="robo.html" class="nav-link">Robô</a></li>
+          <li><a href="desenvolvimento.html" class="nav-link">Desenvolvimento</a></li>
+          <li><a href="galeria.html" class="nav-link">Galeria</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+        <span class="hamburger-icon">☰</span>
+      </button>
+    </div>
+  </header>
 
   <a href="../index.html" class="oficina-back-btn"><i class="fas fa-arrow-left"></i> Voltar</a>
 
+  <main>
   <section class="oficina-single">
     <div class="oficina-side">
       <span class="tag">LAB G3</span>
       <h1>O <span>Galpão</span></h1>
       <p class="sub">LAB G3 ROBÓTICA</p>
       <div class="divider"></div>
-      <p class="desc">O laboratório de robótica do IFTO Campus Palmas, onde a Neo Genesis cria, testa e compete. Impressão 3D, programação, montagem — tudo aqui.</p>
+      <p class="desc">O laboratório de robótica do IFTO Campus Palmas, onde a NEO GENESIS cria, testa e compete. Impressão 3D, programação, montagem — tudo aqui.</p>
       <div class="prof">
         <strong>Professor <a href="https://integra.ifto.edu.br/portfolio/pessoas/wendell-eduardo-moura-costa/experimento" target="_blank" style="text-decoration: none;">Wendell Eduardo</a></strong>
         <span>Coordenador do LAB G3</span>
@@ -69,50 +98,10 @@
       </div>
     </div>
   </section>
+  </main>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      var slides = document.querySelectorAll('.slide');
-      var dots = document.querySelectorAll('.nav-dot');
-      var prev = document.querySelector('.slide-arrow--prev');
-      var next = document.querySelector('.slide-arrow--next');
-      var current = 0;
-      var interval;
-
-      function goTo(index) {
-        slides.forEach(function(s) { s.classList.remove('active'); });
-        dots.forEach(function(d) { d.classList.remove('active'); });
-        slides[index].classList.add('active');
-        dots[index].classList.add('active');
-        current = index;
-        resetInterval();
-      }
-
-      function nextSlide() {
-        goTo((current + 1) % slides.length);
-      }
-
-      function prevSlide() {
-        goTo((current - 1 + slides.length) % slides.length);
-      }
-
-      function resetInterval() {
-        clearInterval(interval);
-        interval = setInterval(nextSlide, 5000);
-      }
-
-      dots.forEach(function(dot) {
-        dot.addEventListener('click', function() {
-          goTo(parseInt(this.getAttribute('data-index')));
-        });
-      });
-
-      if (prev) prev.addEventListener('click', prevSlide);
-      if (next) next.addEventListener('click', nextSlide);
-
-      interval = setInterval(nextSlide, 5000);
-    });
-  </script>
+  <script defer src="../3-scripts/navbar.js"></script>
+  <script src="../3-scripts/oficina-slider.js" defer></script>
 
 </body>
 </html>

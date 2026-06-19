@@ -63,7 +63,7 @@
 
 .robo-card-info p {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.55);
   line-height: 1.4;
   max-width: 220px;
   margin: 0 auto;
@@ -84,7 +84,7 @@
 }
 
 .robo-conteudo p {
-  color: rgba(255,255,255,0.6);
+  color: rgba(255,255,255,0.78);
   line-height: 1.8;
   font-size: 1rem;
   margin-bottom: 1rem;

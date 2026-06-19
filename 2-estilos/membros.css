@@ -30,7 +30,7 @@
 .membros-aviso p {
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.6;
   max-width: 600px;
   margin: 0 auto;
@@ -99,7 +99,7 @@
 
 .member-card-info p {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.65);
   line-height: 1.4;
   margin: 4px 0 0;
   max-width: 200px;
@@ -107,7 +107,7 @@
 
 .member-nome-completo {
   font-size: 0.65rem !important;
-  color: rgba(255, 255, 255, 0.2) !important;
+  color: rgba(255, 255, 255, 0.45) !important;
   margin-top: 0 !important;
 }
 
@@ -126,7 +126,7 @@
 
 .member-bio {
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.72);
   line-height: 1.4;
   margin: 6px 0 0;
   max-width: 200px;
