@@ -1,0 +1,19 @@
+# Windows
+Thumbs.db
+Desktop.ini
+*.dll
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node / Build
+node_modules/
+dist/
+.env
+
+# OS
+.DS_Store
+*.log
