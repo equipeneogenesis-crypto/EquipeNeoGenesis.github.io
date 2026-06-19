@@ -1,0 +1,128 @@
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.projeto-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  padding: 0 0 20px;
+  text-align: center;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+}
+
+.projeto-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+}
+
+.projeto-card:hover .projeto-card-thumb {
+  transform: scale(1.05);
+}
+
+.projeto-card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0 0 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: transform 0.8s ease, box-shadow 0.8s ease;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(255,255,255,0.03);
+}
+
+.projeto-card-thumb::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+  z-index: 0;
+}
+
+.projeto-card-overlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  color: #fff;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.projeto-card:hover .projeto-card-overlay {
+  opacity: 1;
+}
+
+.projeto-card-overlay i {
+  font-size: 1.4rem;
+  color: #00f5ff;
+}
+
+.projeto-card-overlay span {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.projeto-card-thumb:hover {
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.15);
+}
+
+.projeto-card-info {
+  text-align: center;
+  padding: 0 16px;
+}
+
+.projeto-card-info h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin-bottom: 2px;
+}
+
+.projeto-card-info p {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.25);
+  line-height: 1.5;
+  max-width: 220px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .projeto-card {
+    padding: 0 0 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projeto-card-info h4 {
+    font-size: 0.95rem;
+  }
+  .projeto-card-info p {
+    font-size: 0.72rem;
+  }
+}
