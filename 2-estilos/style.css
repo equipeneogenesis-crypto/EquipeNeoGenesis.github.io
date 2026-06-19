@@ -83,6 +83,7 @@ html.scroll-locked, body.scroll-locked {
   height: 100vh;
 }
 
+/* Screen-reader only */
 .sr-only {
   position: absolute;
   width: 1px;
