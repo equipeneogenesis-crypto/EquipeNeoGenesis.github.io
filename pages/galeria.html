@@ -1,22 +1,22 @@
-<!DOCTYPE html>
+ï»¿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NEO GENESIS — Galeria">
-  <title>NEO GENESIS — Galeria</title>
-  <link rel="icon" href="../assets/images/logo.jpeg">
+  <meta name="description" content="NEO GENESIS â€” Galeria">
+  <title>NEO GENESIS â€” Galeria</title>
+  <link rel="icon" href="../4-recursos/imagens/logo.jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;600;700&family=Orbitron:wght@400;700;900&family=Exo+2:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="../src/css/inner.css">
-  <link rel="stylesheet" href="../src/css/navbar.css">
-  <link rel="stylesheet" href="../src/css/galeria.css">
+  <link rel="stylesheet" href="../2-estilos/inner.css">
+  <link rel="stylesheet" href="../2-estilos/navbar.css">
+  <link rel="stylesheet" href="../2-estilos/galeria.css">
 </head>
 <body>
-  <a href="../index.html" class="skip-link">Voltar ao início</a>
+  <a href="../index.html" class="skip-link">Voltar ao inÃ­cio</a>
   <section class="page-header">
     <div class="page-header-content">
       <h1 data-animate="up">GALERIA</h1>
@@ -24,17 +24,17 @@
   </section>
   <header class="navbar" id="navbar">
     <div class="navbar-container">
-      <nav class="nav-links-wrapper" aria-label="Navegação principal">
+      <nav class="nav-links-wrapper" aria-label="NavegaÃ§Ã£o principal">
         <ul class="nav-links">
-          <li><a href="../index.html" target="_self" class="nav-link">Início</a></li>
+          <li><a href="../index.html" target="_self" class="nav-link">InÃ­cio</a></li>
           <li><a href="membros.html" target="_self" class="nav-link">Membros</a></li>
-          <li><a href="robo.html" target="_self" class="nav-link">Robô</a></li>
+          <li><a href="robo.html" target="_self" class="nav-link">RobÃ´</a></li>
           <li><a href="desenvolvimento.html" target="_self" class="nav-link">Desenvolvimento</a></li>
            <li><a href="galeria.html" target="_self" class="nav-link active">Galeria</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-        <span class="hamburger-icon">?</span>
+        <span class="hamburger-icon">â˜°</span>
       </button>
     </div>
   </header>
@@ -51,20 +51,20 @@
       <div class="container">
         <div class="footer__grid">
           <div class="footer__brand">
-            <a href="../index.html" class="footer__logo" aria-label="Ir para o início">
-              <img loading="lazy" src="../assets/images/logo.jpeg" alt="NEO GENESIS" class="footer__logo-img">
+            <a href="../index.html" class="footer__logo" aria-label="Ir para o inÃ­cio">
+              <img loading="lazy" src="../4-recursos/imagens/logo.jpeg" alt="NEO GENESIS" class="footer__logo-img">
               <span class="footer__logo-text">NEO GENESIS</span>
             </a>
-            <p class="footer__desc">Equipe de tecnologia e robótica construindo o futuro através da inovação e educação.</p>
+            <p class="footer__desc">Equipe de tecnologia e robÃ³tica construindo o futuro atravÃ©s da inovaÃ§Ã£o e educaÃ§Ã£o.</p>
           </div>
-          <nav class="footer__col" aria-label="Links rápidos">
-            <h4 class="footer__title">Navegação</h4>
+          <nav class="footer__col" aria-label="Links rÃ¡pidos">
+            <h4 class="footer__title">NavegaÃ§Ã£o</h4>
             <ul class="footer__list">
-              <li><a href="../index.html">Início</a></li>
+              <li><a href="../index.html">InÃ­cio</a></li>
               <li><a href="desenvolvimento.html">Desenvolvimento</a></li>
               <li><a href="galeria.html">Galeria</a></li>
               <li><a href="oficina.html">Oficina</a></li>
-              <li><a href="robo.html">Robô</a></li>
+              <li><a href="robo.html">RobÃ´</a></li>
             </ul>
           </nav>
           <div class="footer__col">
@@ -81,8 +81,8 @@
       </div>
     </footer>
   </main>
-  <script defer src="../src/js/main.js"></script>
-  <script defer src="../src/js/navbar.js"></script>
+  <script defer src="../3-scripts/main.js"></script>
+  <script defer src="../3-scripts/navbar.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const galeriaFotos = [
@@ -141,7 +141,7 @@
       grid.innerHTML = galeriaFotos.map(f => `
         <div class="galeria-item">
           <div class="galeria-img-wrapper">
-            <img data-src="../assets/images/galeria/${encodeURIComponent(f)}" alt="Foto galeria">
+            <img data-src="../4-recursos/imagens/galeria/${encodeURIComponent(f)}" alt="Foto galeria">
           </div>
         </div>
       `).join('');
