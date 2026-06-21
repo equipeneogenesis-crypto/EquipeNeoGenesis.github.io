@@ -1,5 +1,10 @@
 ﻿@import url('fonts.css');
 
+#scroll-container {
+  position: relative;
+  overflow: hidden;
+}
+
 /* ============================================================
    STYLE.CSS — NEO GENESIS
    Design: Clássico, Clean, Alto Contraste e Cinematográfico
@@ -156,7 +161,7 @@ html.scroll-locked, body.scroll-locked {
   background: #111827;
   min-height: 100vh;
   height: auto;
-
+  scroll-snap-align: start;
 }
 
 .about-layout {
@@ -347,7 +352,7 @@ html.scroll-locked, body.scroll-locked {
   height: 100vh;
   border-top: 1px solid var(--clr-border);
   border-bottom: 1px solid var(--clr-border);
-
+  scroll-snap-align: start;
 }
 
 .split-item {
@@ -455,6 +460,8 @@ html.scroll-locked, body.scroll-locked {
   background: var(--clr-bg);
   display: flex;
   align-items: stretch;
+  min-height: 100vh;
+  scroll-snap-align: start;
 }
 
 .sponsors .section-content {
@@ -580,7 +587,7 @@ html.scroll-locked, body.scroll-locked {
   overflow: hidden;
   display: block;
   height: 100vh;
-
+  scroll-snap-align: start;
 }
 
 .contact-layout {

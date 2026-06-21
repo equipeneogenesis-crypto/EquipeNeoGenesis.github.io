@@ -12,22 +12,23 @@
   var lastDirection = 0;
   var enabled = false;
 
-  var SCROLL_THRESHOLD = 30;
-  var ANIMATION_DURATION = 950;
+  var SCROLL_THRESHOLD = 40;
+  var ANIMATION_DURATION = 900;
   var LOCK_DELAY = 100;
 
-  function isMobile() {
-    return window.innerWidth <= 768;
-  }
+  function isMobile() { return window.innerWidth <= 768; }
 
   function recalc() {
-    positions = sections.map(function(s) { return s.offsetTop; });
+    positions = sections.map(function(s) {
+      var rect = s.getBoundingClientRect();
+      var parentRect = container.getBoundingClientRect();
+      return rect.top - parentRect.top;
+    });
   }
 
   function goTo(dest) {
     if (dest < 0 || dest >= sections.length || isAnimating) return;
     if (dest === currentIndex) return;
-
     isAnimating = true;
     currentIndex = dest;
     recalc();
@@ -35,7 +36,6 @@
     updateNav(currentIndex);
     var navbar = document.getElementById('navbar');
     if (navbar) navbar.classList.toggle('scrolled', currentIndex > 0);
-
     setTimeout(function() {
       isAnimating = false;
       scrollAccumulator = 0;
@@ -50,22 +50,11 @@
   }
 
   function handleScroll(delta) {
-    if (isAnimating) {
-      scrollAccumulator = 0;
-      lastDirection = 0;
-      return;
-    }
-
+    if (isAnimating) { scrollAccumulator = 0; lastDirection = 0; return; }
     var direction = delta > 0 ? 1 : -1;
     var absDelta = Math.abs(delta);
-
-    if (direction !== lastDirection) {
-      scrollAccumulator = 0;
-      lastDirection = direction;
-    }
-
+    if (direction !== lastDirection) { scrollAccumulator = 0; lastDirection = direction; }
     scrollAccumulator += absDelta;
-
     if (scrollAccumulator >= SCROLL_THRESHOLD) {
       var next = currentIndex + direction;
       if (next >= 0 && next < sections.length) {
@@ -87,14 +76,10 @@
   function enable() {
     if (enabled) return;
     enabled = true;
-
     document.documentElement.classList.add('scroll-locked');
     document.body.classList.add('scroll-locked');
-
     container.style.transition = 'transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
     container.style.willChange = 'transform';
-    container.style.backgroundColor = '#0A0A0A';
-
     recalc();
     container.style.transform = 'translate3d(0, -' + positions[0] + 'px, 0)';
   }
@@ -102,10 +87,8 @@
   function disable() {
     if (!enabled) return;
     enabled = false;
-
     document.documentElement.classList.remove('scroll-locked');
     document.body.classList.remove('scroll-locked');
-
     container.style.transition = '';
     container.style.willChange = '';
     container.style.transform = '';
@@ -117,22 +100,16 @@
   }, { passive: true });
 
   var touchStartY = null;
-
   container.addEventListener('touchstart', function(e) {
     if (!enabled || isAnimating) return;
     touchStartY = e.touches[0].clientY;
   }, { passive: true });
-
   container.addEventListener('touchmove', function(e) {
     if (!enabled || isAnimating || touchStartY === null) return;
-    e.preventDefault();
-
     var deltaY = touchStartY - e.touches[0].clientY;
     touchStartY = e.touches[0].clientY;
-
     handleScroll(deltaY);
   }, { passive: false });
-
   container.addEventListener('touchend', function() {
     touchStartY = null;
   }, { passive: true });
@@ -147,27 +124,16 @@
       if (!target || target === sections[currentIndex]) return;
       e.preventDefault();
       var idx = sections.indexOf(target);
-      if (idx >= 0) {
-        scrollAccumulator = 0;
-        lastDirection = 0;
-        goTo(idx);
-      }
+      if (idx >= 0) { scrollAccumulator = 0; lastDirection = 0; goTo(idx); }
     });
   });
 
   window.scrollToSection = function(id) {
     var target = document.getElementById(id);
     if (!target) return;
-    if (!enabled) {
-      target.scrollIntoView({ behavior: 'smooth' });
-      return;
-    }
+    if (!enabled) { target.scrollIntoView({ behavior: 'smooth' }); return; }
     var idx = sections.indexOf(target);
-    if (idx >= 0) {
-      scrollAccumulator = 0;
-      lastDirection = 0;
-      goTo(idx);
-    }
+    if (idx >= 0) { scrollAccumulator = 0; lastDirection = 0; goTo(idx); }
   };
 
   window.addEventListener('keydown', function(e) {
@@ -177,26 +143,10 @@
       if (isAnimating) return;
       var dir = (e.key === 'ArrowDown' || e.key === 'PageDown' || e.key === ' ') ? 1 : -1;
       var next = currentIndex + dir;
-      if (next >= 0 && next < sections.length) {
-        scrollAccumulator = 0;
-        lastDirection = 0;
-        goTo(next);
-      }
+      if (next >= 0 && next < sections.length) { scrollAccumulator = 0; lastDirection = 0; goTo(next); }
     }
-    if (e.key === 'Home') {
-      e.preventDefault();
-      if (isAnimating) return;
-      scrollAccumulator = 0;
-      lastDirection = 0;
-      goTo(0);
-    }
-    if (e.key === 'End') {
-      e.preventDefault();
-      if (isAnimating) return;
-      scrollAccumulator = 0;
-      lastDirection = 0;
-      goTo(sections.length - 1);
-    }
+    if (e.key === 'Home') { e.preventDefault(); if (isAnimating) return; scrollAccumulator = 0; lastDirection = 0; goTo(0); }
+    if (e.key === 'End') { e.preventDefault(); if (isAnimating) return; scrollAccumulator = 0; lastDirection = 0; goTo(sections.length - 1); }
   });
 
   var rafId;
@@ -205,7 +155,6 @@
     rafId = requestAnimationFrame(function() {
       if (isMobile() && enabled) disable();
       else if (!isMobile() && !enabled) enable();
-
       if (enabled) {
         recalc();
         container.style.transition = 'none';

@@ -33,7 +33,6 @@
   .contact {
     height: auto;
     min-height: auto;
-    scroll-snap-align: none;
   }
 
   .sponsors {
