@@ -2,44 +2,18 @@
   const form = document.querySelector('.contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
-    const nome = form.querySelector('#nome');
-    const email = form.querySelector('#email');
-    const mensagem = form.querySelector('#mensagem');
-    let valido = true;
+  const btn = form.querySelector('.form-btn');
+  const labelOriginal = btn ? btn.textContent : '';
 
-    [nome, email, mensagem].forEach(campo => {
-      if (!campo) return;
-      campo.style.borderColor = '';
-    });
+  form.addEventListener('submit', () => {
+    if (!form.checkValidity()) return;
 
-    if (!nome || !nome.value.trim()) {
-      if (nome) nome.style.borderColor = '#ff4444';
-      valido = false;
-    }
-
-    if (!email?.value.trim() || !email.value.includes('@')) {
-      if (email) email.style.borderColor = '#ff4444';
-      valido = false;
-    }
-
-    if (!mensagem?.value.trim()) {
-      if (mensagem) mensagem.style.borderColor = '#ff4444';
-      valido = false;
-    }
-
-    if (!valido) {
-      e.preventDefault();
-      return;
-    }
-
-    const btn = form.querySelector('.form-btn');
     if (btn) {
       btn.textContent = 'ENVIANDO...';
       btn.disabled = true;
       setTimeout(() => {
         btn.disabled = false;
-        btn.textContent = 'ENVIAR';
+        btn.textContent = labelOriginal;
       }, 10000);
     }
   });
