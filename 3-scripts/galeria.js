@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const imagens = fotos.map((foto) => {
     const img = new Image();
     img.src = `${basePath}${foto}`;
-    img.loading = "lazy";
     return img;
   });
 
