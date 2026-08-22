@@ -753,6 +753,10 @@ html.scroll-locked, body.scroll-locked {
   transform: translateY(-2px);
 }
 
+.contact-form-side .form-btn {
+  margin-top: -0.75rem;
+}
+
 /* ===== FOOTER ===== */
 .footer {
   padding: 6rem 0 4rem;
