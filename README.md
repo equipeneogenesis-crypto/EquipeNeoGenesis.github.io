@@ -128,3 +128,5 @@ O GitHub Pages publica automaticamente.
 - Three.js para modelos 3D
 - Font Awesome para ícones
 - Google Fonts para tipografia
+
+criação de um único membro DSevero16
